@@ -54,6 +54,18 @@ def note_aleatoire_accord_majeur(premiere_note_accord, derniere_note_accord):
         premiere_note_accord+=12
     return notes[random.randint(0, len(notes) - 1)]
 
+def note_aleatoire_accord_majeur_septieme_majeure(premiere_note_accord, derniere_note_accord):
+    notes = []
+    while (premiere_note_accord < derniere_note_accord):
+        notes = notes + [
+            premiere_note_accord, 
+            premiere_note_accord + 4,
+            premiere_note_accord + 7,
+            premiere_note_accord + 11,
+        ]
+        premiere_note_accord+=12
+    return notes[random.randint(0, len(notes) - 1)]
+
 def note_aleatoire_accord_mineur(premiere_note_accord, derniere_note_accord):
     notes = []
     while (premiere_note_accord < derniere_note_accord):
